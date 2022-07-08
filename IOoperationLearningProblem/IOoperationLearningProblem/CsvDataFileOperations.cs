@@ -39,5 +39,23 @@ namespace FileIOOperation
                 csvWriter.Dispose();
             }
         }
+        public static void CSVDeserialize()
+        {
+            try
+            {
+                string csvPath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\CsvData.csv";
+                StreamReader sr = new StreamReader(csvPath);
+                CsvReader cr = new CsvReader(sr, CultureInfo.InvariantCulture);
+                List<Person> res = cr.GetRecords<Person>().ToList();
+                foreach (Person person in res)
+                {
+                    Console.WriteLine(person);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
