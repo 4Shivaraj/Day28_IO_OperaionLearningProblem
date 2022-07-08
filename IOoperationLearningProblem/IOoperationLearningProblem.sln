@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOoperationLearningProblem", "IOoperationLearningProblem\IOoperationLearningProblem.csproj", "{88234405-EEC1-4D08-B527-A3B70171949B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88234405-EEC1-4D08-B527-A3B70171949B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88234405-EEC1-4D08-B527-A3B70171949B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88234405-EEC1-4D08-B527-A3B70171949B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88234405-EEC1-4D08-B527-A3B70171949B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A781E254-FEFD-438F-B411-DAD887CB4361}
+	EndGlobalSection
+EndGlobal
