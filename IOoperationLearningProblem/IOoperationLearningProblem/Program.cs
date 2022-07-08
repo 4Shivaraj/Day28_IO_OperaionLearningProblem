@@ -7,7 +7,8 @@ namespace FileIOOperation
         {
             Console.WriteLine("Welcome To IO Learning Problems");
             Console.WriteLine("1 for Jason Serialise");
-            
+            Console.WriteLine("2 for Jason Deserialise");
+
 
             int Problem = Convert.ToInt32(Console.ReadLine());
             switch (Problem)
@@ -16,7 +17,11 @@ namespace FileIOOperation
                     JasonDataOperaton.JsonSerialize();
                     Console.ReadLine();
                     break;
-                
+                case 2:
+                    JasonDataOperaton.JsonDeserialize();
+                    Console.ReadLine();
+                    break;
+
                 default:
                     break;
             }
@@ -26,25 +31,15 @@ namespace FileIOOperation
     }
 }
 
-//Jason Serialisation
-//In JSON File("C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\JsonData.json")
+//Jason DeSerialisation
+//In Console
 
 //Result:
-//[
-
-//  {
-//    "PersonId": 12,
-//    "Name": "Shivaraj",
-//    "Address": "Delhi"
-//  },
-//  {
-//    "PersonId": 13,
-//    "Name": "Arun",
-//    "Address": "Bangalore"
-//  },
-//  {
-//    "PersonId": 12,
-//    "Name": "Deepak",
-//    "Address": "Bangal"
-//  }
-//]
+//Welcome To IO Learning Problems
+//1 for Jason Serialise
+//2 for Jason Deserialise
+//2
+//File Exists
+//Id:12   Name: Shivaraj Address: Delhi
+//Id:13   Name: Arun Address: Bangalore
+//Id:12   Name: Deepak Address: Bangal

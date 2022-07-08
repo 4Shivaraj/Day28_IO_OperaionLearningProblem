@@ -33,6 +33,22 @@ namespace FileIOOperation
             //Writing in to file
             File.WriteAllText(jsonPath, result);
         }
+        public static void JsonDeserialize()
+        {
+            string jsonPath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\JsonData.json";
+            if (IsFileExists(jsonPath))
+            {
+                string JsonData = File.ReadAllText(jsonPath);
+                List<Person> result = JsonConvert.DeserializeObject<List<Person>>(JsonData);
+                if (result.Count != 0)
+                {
+                    foreach (Person person in result)
+                    {
+                        Console.WriteLine(person);
+                    }
+                }
+            }
+        }
         public static bool IsFileExists(string path)
         {
             if (File.Exists(path))
@@ -56,7 +72,7 @@ namespace FileIOOperation
 
         public override string ToString()
         {
-            return $"Id : " + PersonId + " Name " + Name + "Address" + Address;
+            return $"Id:"+PersonId + " " + "\tName:"+" "+Name + " " + "\tAddress:" + " "+Address;
         }
     }
 }
