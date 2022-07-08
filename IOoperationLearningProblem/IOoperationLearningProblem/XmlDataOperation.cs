@@ -38,5 +38,30 @@ namespace FileIOOperation
                 sw.Close();
             }
         }
+        public static void XmlDeSeialize()
+        {
+            try
+            {
+                StreamReader sr = null;
+                string xmLpath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\XmlData.txt";
+                if (JasonDataOperaton.IsFileExists(xmLpath))
+                {
+                    XmlSerializer xml = new XmlSerializer(typeof(List<Person>));
+                    sr = new StreamReader(xmLpath);
+                    List<Person> result  = (List<Person>)xml.Deserialize(sr);
+                    if (result.Count != 0)
+                    {
+                        foreach (Person person in result)
+                        {
+                            Console.WriteLine(person);
+                        }
+                    } 
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

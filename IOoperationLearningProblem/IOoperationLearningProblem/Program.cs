@@ -9,6 +9,7 @@ namespace FileIOOperation
             Console.WriteLine("1 for Jason Serialise");
             Console.WriteLine("2 for Jason Deserialise");
             Console.WriteLine("3 for Xml Serialise");
+            Console.WriteLine("4 for Xml DeSerialise");
 
 
             int Problem = Convert.ToInt32(Console.ReadLine());
@@ -26,6 +27,10 @@ namespace FileIOOperation
                     XMLDataOperations.XmlSeialize();
                     Console.ReadLine();
                     break;
+                case 4:
+                    XMLDataOperations.XmlDeSeialize();
+                    Console.ReadLine();
+                    break;
                 default:
                     break;
             }
@@ -35,12 +40,17 @@ namespace FileIOOperation
     }
 }
 
-//Xml Serialization
+//Xml DeSerialization
 //"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\XmlData.txt";
 
 //Result:
-//<?xml version="1.0" encoding="utf-8"?><ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-//<Person><PersonId>12</PersonId><Name>Shivaraj</Name><Address>Bangalore</Address></Person>
-//<Person><PersonId>13</PersonId><Name>Shravan</Name><Address>Mangalore</Address></Person>
-//<Person><PersonId>12</PersonId><Name>Theekshna</Name><Address>Tumkur</Address></Person>
-//</ArrayOfPerson>
+//Welcome To IO Learning Problems
+//1 for Jason Serialise
+//2 for Jason Deserialise
+//3 for Xml Serialise
+//4 for Xml DeSerialise
+//4
+//File Exists
+//Id:12   Name: Shivaraj Address: Bangalore
+//Id:13   Name: Shravan Address: Mangalore
+//Id:12   Name: Theekshna Address: Tumkur
