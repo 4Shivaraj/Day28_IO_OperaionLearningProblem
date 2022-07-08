@@ -15,9 +15,9 @@ namespace FileIOOperation
         /// <summary>
         /// Jsons the serialize
         /// </summary>
-        public static void JsonSerialize()
+        public static void JsonSerialize(List<Person> person, string jsonPath)
         {
-            string jsonPath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\JsonData.json";
+            /* string jsonPath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\JsonData.json";
             //Object Intialiser Instead if adding person.personId = 12
             //Object Intialiser = We can intialise the value to the fields or property of a class
             //at the time of creating object without calling a constructor.
@@ -27,13 +27,13 @@ namespace FileIOOperation
                new Person(){PersonId = 12, Name = "Shivaraj", Address = "Delhi"},
                new Person(){PersonId = 13, Name = "Arun", Address = "Bangalore"},
                new Person(){PersonId = 12, Name = "Deepak", Address = "Bangal"},
-            };
+            };*/
             //Serialise Object method used to convert from object into json data
             string result = JsonConvert.SerializeObject(person);
             //Writing in to file
             File.WriteAllText(jsonPath, result);
         }
-        public static void JsonDeserialize()
+        public static List<Person> JsonDeserialize()
         {
             string jsonPath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\JsonData.json";
             if (IsFileExists(jsonPath))
@@ -47,7 +47,9 @@ namespace FileIOOperation
                         Console.WriteLine(person);
                     }
                 }
+                return result;
             }
+            return null;
         }
         public static bool IsFileExists(string path)
         {
@@ -62,7 +64,6 @@ namespace FileIOOperation
                 return false;
             }
         }
-
     }
     public class Person
     {
@@ -72,7 +73,7 @@ namespace FileIOOperation
 
         public override string ToString()
         {
-            return $"Id:"+PersonId + " " + "\tName:"+" "+Name + " " + "\tAddress:" + " "+Address;
+            return $"Id:" + PersonId + " " + "\tName:" + " " + Name + " " + "\tAddress:" + " " + Address;
         }
     }
 }

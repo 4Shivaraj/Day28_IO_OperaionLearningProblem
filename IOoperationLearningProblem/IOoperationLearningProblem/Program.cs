@@ -12,12 +12,14 @@ namespace FileIOOperation
             Console.WriteLine("4 for Xml DeSerialise");
             Console.WriteLine("5 for Csv Serialise");
             Console.WriteLine("6 for Csv DeSerialise");
+            Console.WriteLine("7 for Read From Csv Write Into Json");
+            Console.WriteLine("8 for Read From Json Write Into Csv");
 
             int Problem = Convert.ToInt32(Console.ReadLine());
             switch (Problem)
             {
                 case 1:
-                    JasonDataOperaton.JsonSerialize();
+                    //JasonDataOperaton.JsonSerialize();
                     Console.ReadLine();
                     break;
                 case 2:
@@ -33,11 +35,19 @@ namespace FileIOOperation
                     Console.ReadLine();
                     break;
                 case 5:
-                    CsvFileDataOperations.CSVSerialize();
+                    //CsvFileDataOperations.CSVSerialize();
                     Console.ReadLine();
                     break;
                 case 6:
                     CsvFileDataOperations.CSVDeserialize();
+                    Console.ReadLine();
+                    break;
+                case 7:
+                    CsvAndJsonOperations.ReadFromCsvWriteIntoJson();
+                    Console.ReadLine();
+                    break;
+                case 8:
+                    CsvAndJsonOperations.ReadFromJsonWriteIntoCsv();
                     Console.ReadLine();
                     break;
                 default:
@@ -49,18 +59,38 @@ namespace FileIOOperation
     }
 }
 
-//CSV DeSerialization
-//In Console
+//Read From Csv Write Into Json
+//In readFromCsvWriteIntoJson.Json
+//C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\readFromCsvWriteIntoJson.Json
 
 //Result:
-//Welcome To IO Learning Problems
-//1 for Jason Serialise
-//2 for Jason Deserialise
-//3 for Xml Serialise
-//4 for Xml DeSerialise
-//5 for Csv Serialise
-//6 for Csv DeSerialise
-//6
-//Id:12   Name: Shivaraj Address: Bangalore
-//Id:13   Name: Vinay Address: Tumkur
-//Id:12   Name: Manu Address: Hasan
+/*
+[
+  
+  {
+    "PersonId": 12,
+    "Name": "Shivaraj",
+    "Address": "Bangalore"
+  },
+  {
+    "PersonId": 13,
+    "Name": "Vinay",
+    "Address": "Tumkur"
+  },
+  {
+    "PersonId": 12,
+    "Name": "Manu",
+    "Address": "Hasan"
+  }
+]
+*/
+//--------------------------------------------//
+
+//Read From Json Write Into Csv
+//C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\readFromJsonWriteIntocsv.csv
+
+//PersonId,Name,Address
+//12,Shivaraj,Delhi
+//13,Arun,Bangalore
+//12,Deepak,Bangal
+

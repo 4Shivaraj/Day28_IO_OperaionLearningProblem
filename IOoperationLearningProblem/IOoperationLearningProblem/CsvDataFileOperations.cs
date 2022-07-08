@@ -10,13 +10,14 @@ namespace FileIOOperation
 {
     class CsvFileDataOperations
     {
-        public static void CSVSerialize()
+        public static void CSVSerialize(List<Person> person, string csvPath)
         {
             StreamWriter sw = null;
             CsvWriter csvWriter = null;
 
             try
             {
+                /*
                 string csvPath = @"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\CsvData.csv";
 
                 List<Person> person = new List<Person>()
@@ -25,6 +26,7 @@ namespace FileIOOperation
                     new Person() { PersonId = 13, Name = "Vinay", Address = "Tumkur" },
                     new Person() { PersonId = 12, Name = "Manu", Address = "Hasan" },
                 };
+                */
                 sw = new StreamWriter(csvPath);
                 csvWriter = new CsvWriter(sw, CultureInfo.InvariantCulture);
                 csvWriter.WriteRecords(person);
@@ -36,10 +38,10 @@ namespace FileIOOperation
             finally
             {
                 sw.Close();
-                csvWriter.Dispose();
+                //csvWriter.Dispose();
             }
         }
-        public static void CSVDeserialize()
+        public static List<Person> CSVDeserialize()
         {
             try
             {
@@ -51,10 +53,12 @@ namespace FileIOOperation
                 {
                     Console.WriteLine(person);
                 }
+                return res;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return null;
             }
         }
     }
