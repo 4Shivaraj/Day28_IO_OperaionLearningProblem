@@ -10,7 +10,7 @@ namespace FileIOOperation
             Console.WriteLine("2 for Jason Deserialise");
             Console.WriteLine("3 for Xml Serialise");
             Console.WriteLine("4 for Xml DeSerialise");
-
+            Console.WriteLine("5 for Csv Serialise");
 
             int Problem = Convert.ToInt32(Console.ReadLine());
             switch (Problem)
@@ -31,6 +31,10 @@ namespace FileIOOperation
                     XMLDataOperations.XmlDeSeialize();
                     Console.ReadLine();
                     break;
+                case 5:
+                    CsvFileDataOperations.CSVSerialize();
+                    Console.ReadLine();
+                    break;
                 default:
                     break;
             }
@@ -40,17 +44,11 @@ namespace FileIOOperation
     }
 }
 
-//Xml DeSerialization
-//"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\XmlData.txt";
+//CSV Serialization
+//"C:\Users\4shiv\OneDrive\Desktop\Fellowship\Assignments\Assignment_Day_28\Files\CsvData.csv";
 
 //Result:
-//Welcome To IO Learning Problems
-//1 for Jason Serialise
-//2 for Jason Deserialise
-//3 for Xml Serialise
-//4 for Xml DeSerialise
-//4
-//File Exists
-//Id:12   Name: Shivaraj Address: Bangalore
-//Id:13   Name: Shravan Address: Mangalore
-//Id:12   Name: Theekshna Address: Tumkur
+//PersonId,Name,Address
+//12,Shivaraj,Bangalore
+//13,Vinay,Tumkur
+//12,Manu,Hasan
